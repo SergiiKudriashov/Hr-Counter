@@ -1,0 +1,1107 @@
+@charset 'UTF-8';
+/* Importing of fonts */
+@font-face
+{
+    font-family: 'Ubuntu bold';
+    font-style: normal; 
+
+    src: url('fonts/Ubuntu-B.ttf');
+}
+
+@font-face
+{
+    font-family: 'Ubuntu bold';
+    font-style: italic; 
+
+    src: url('fonts/Ubuntu-BI.ttf');
+}
+
+@font-face
+{
+    font-family: 'Ubuntu medium';
+    font-style: normal; 
+
+    src: url('fonts/Ubuntu-M.ttf');
+}
+
+@font-face
+{
+    font-family: 'Ubuntu  medium';
+    font-style: italic; 
+
+    src: url('fonts/Ubuntu-MI.ttf');
+}
+
+@font-face
+{
+    font-family: 'Ubuntu regular';
+    font-style: normal; 
+
+    src: url('fonts/Ubuntu-R.ttf');
+}
+
+@font-face
+{
+    font-family: 'Ubuntu regular';
+    font-style: italic; 
+
+    src: url('fonts/Ubuntu-RI.ttf');
+}
+
+@font-face
+{
+    font-family: 'Ubuntu light';
+    font-style: normal; 
+
+    src: url('fonts/Ubuntu-L.ttf');
+}
+
+@font-face
+{
+    font-family: 'Ubuntu light';
+    font-style: italic; 
+
+    src: url('fonts/Ubuntu-LI.ttf');
+}
+
+/* Importing of fonts END */
+/* Button styles */
+.btn
+{
+    line-height: 100%;
+
+    width: 21.2rem;
+    height: 4.5rem;
+    margin: 0;
+    padding: 0;
+
+    color: #fff;
+    border: 0;
+    border-radius: .5rem;
+    outline: none;
+}
+.btn a
+{
+    font-family: 'Ubuntu bold';
+    font-size: 1.7rem; 
+
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+.btn-01
+{
+    background-color: #e74c3c;
+}
+.btn-01:hover
+{
+    background-color: #ec7063;
+}
+.btn-01:active
+{
+    background-color: #c54133;
+}
+.btn-02
+{
+    background-color: #1abc9c;
+}
+.btn-02:hover
+{
+    background-color: #48c9b0;
+}
+.btn-02:active
+{
+    background-color: #16a085;
+}
+.btn-03
+{
+    background-color: #3498db;
+}
+.btn-03:hover
+{
+    background-color: #5dade2;
+}
+.btn-03:active
+{
+    background-color: #2c81ba;
+}
+.btn-04
+{
+    background-color: #34495e;
+}
+.btn-04:hover
+{
+    background-color: #5d6d7e;
+}
+.btn-04:active
+{
+    background-color: #2c3e50;
+}
+
+/* Button styles END */
+/* Headers/links etc styles */
+/* Header styles */
+h1
+{
+    font-family: 'Ubuntu bold';
+    font-size: 3.2rem;
+    line-height: 4.544rem;
+}
+
+h2
+{
+    font-family: 'Ubuntu bold';
+    font-size: 2.6rem;
+    line-height: 3.692rem;
+}
+
+h3
+{
+    font-family: 'Ubuntu medium';
+    font-size: 2.4rem;
+    line-height: 3.408rem;
+}
+
+h4
+{
+    font-family: 'Ubuntu medium';
+    font-size: 1.6rem;
+    line-height: 2.272rem;
+}
+
+h5
+{
+    font-family: 'Ubuntu medium';
+    font-size: 1.3rem;
+    line-height: 1.846rem;
+}
+
+/* Header styles END */
+/* Links styles */
+a
+{
+    font-family: 'Ubuntu regular';
+    font-size: 1.4rem;
+    line-height: 2rem; 
+
+    color: #16a085;
+}
+
+p
+{
+    font-family: 'Ubuntu regular';
+    font-size: 1.4rem;
+    line-height: 2rem; 
+
+    color: #34495e;
+}
+
+strong
+{
+    font-family: 'Ubuntu bold';
+}
+
+em
+{
+    font-family: 'Ubuntu regular';
+    font-style: italic;
+}
+
+/* Links styles END */
+/* Headers/links etc styles END*/
+/* List styles */
+/* List styles */
+.ol
+{
+    margin-left: 0;
+    padding-right: 0;
+
+    list-style-type: none;
+}
+
+.ol li
+{
+    line-height: 2.1rem; 
+
+    counter-increment: step-counter;
+}
+
+.ol li::before
+{
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 2.1rem;
+
+    margin: 0;
+    padding: .3rem .6rem 0 0; 
+
+    content: counter(step-counter) '. ';
+
+    color: #3464a7;
+}
+
+.ul
+{
+    position: relative;
+
+    margin-left: 0;
+    padding-right: 20px;
+
+    list-style-type: none;
+}
+
+.ul li
+{
+    line-height: 2.1rem; 
+
+    position: relative;
+
+    padding: 0 0 0 1.5rem;
+}
+
+.ul li::before
+{
+    line-height: 2.1rem;
+
+    position: absolute;
+    top: .75rem;
+    left: .1rem; 
+
+    display: block;
+
+    width: .5rem;
+    height: .5rem;
+
+    content: '';
+
+    border-radius: 100%;
+    background-color: #3464a7;
+}
+
+/* List styles END*/
+/* List styles END*/
+/* Tables styles import */
+table
+{
+    line-height: 2.1rem;
+
+    margin: 0;
+    padding: 0;
+
+    border-spacing: 0; 
+
+    border: 1.4px solid #e8e8e8;
+    border-radius: .6rem;
+}
+
+td,
+th
+{
+    font-size: 1.4rem;
+
+    height: 4rem;
+    padding: 0 3.2rem 0 3.2rem;
+
+    text-align: center; 
+
+    border: .1rem solid #e8e8e8;
+}
+
+th
+{
+    font-family: 'Ubuntu bold';
+
+    color: #fff; 
+    background-color: #2c3e50;
+}
+
+td
+{
+    font-family: 'Ubuntu regular';
+
+    color: #626262; 
+    background-color: #fff;
+}
+
+tr:nth-child(2n+1) td
+{
+    background-color: #ededed;
+}
+
+tr:first-child th:first-child
+{
+    border-radius: .6rem 0 0 0;
+}
+
+tr:last-child td:first-child
+{
+    border-radius: 0 0 0 .6rem;
+}
+
+tr:first-child th:last-child
+{
+    border-radius: 0 .6rem 0 0;
+}
+
+tr:last-child td:last-child
+{
+    border-radius: 0 0 .6rem 0;
+}
+
+/* Tables styles import END*/
+/* Inputs styles import */
+input[type='email'],
+input[type='text'],
+input[type='number'],
+input[type='datetime'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+input[type='month'],
+input[type='week']
+{
+    font-family: 'Ubuntu regular';
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    width: 21.2rem;
+    height: 4rem;
+    padding: 0 1.1rem;
+
+    color: #949faa; 
+    border: 2px solid #dee1e3;
+    border-radius: .5rem;
+    outline: none;
+}
+input[type='email'][disabled='disabled'],
+input[type='text'][disabled='disabled'],
+input[type='number'][disabled='disabled'],
+input[type='datetime'][disabled='disabled'],
+input[type='password'][disabled='disabled'],
+input[type='search'][disabled='disabled'],
+input[type='tel'][disabled='disabled'],
+input[type='url'][disabled='disabled'],
+input[type='month'][disabled='disabled'],
+input[type='week'][disabled='disabled']
+{
+    color: #c8cdd1; 
+    border-width: 0;
+    background-color: #ebedee;
+}
+input[type='email']:invalid,
+input[type='text']:invalid,
+input[type='number']:invalid,
+input[type='datetime']:invalid,
+input[type='password']:invalid,
+input[type='search']:invalid,
+input[type='tel']:invalid,
+input[type='url']:invalid,
+input[type='month']:invalid,
+input[type='week']:invalid
+{
+    text-decoration: none; 
+
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+input[type='email']:focus,
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='datetime']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
+input[type='month']:focus,
+input[type='week']:focus
+{
+    color: #c8cdd1; 
+    border-color: #1abc9c;
+}
+
+.radio li
+{
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    position: relative;
+
+    margin: 0 0 0 3.2rem; 
+
+    list-style-type: none;
+
+    color: #2c3e50;
+}
+.radio li:hover input[type='radio'] + label::before
+{
+    border-color: #d7dcde;
+}
+.radio li:hover input[type='radio'] + label::after
+{
+    display: inline-block;
+
+    background-color: #d7dcde;
+}
+.radio li input[type='radio']
+{
+    display: none;
+}
+.radio li input[type='radio']:disabled + label
+{
+    color: #d7dcde;
+}
+.radio li input[type='radio']:disabled + label::after
+{
+    display: none;
+}
+.radio li input[type='radio']:checked + label
+{
+    color: #1abc9c;
+}
+.radio li input[type='radio']:checked + label::before
+{
+    border-color: #1abc9c;
+}
+.radio li input[type='radio']:checked + label::after
+{
+    display: inline-block;
+
+    background-color: #1abc9c;
+}
+.radio li input[type='radio'] + label::before
+{
+    position: absolute;
+    left: -3.2rem;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 2rem;
+    height: 2rem;
+
+    content: '';
+
+    border: .4rem solid #d7dcde; 
+    border-radius: 100%;
+}
+.radio li input[type='radio'] + label::after
+{
+    position: absolute;
+    left: -2.5rem;
+
+    display: none; 
+
+    box-sizing: border-box;
+    width: .6rem;
+    height: .6rem;
+    margin-top: .7rem;
+
+    content: '';
+
+    border-radius: 100%;
+}
+
+.checkbox li
+{
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    position: relative;
+
+    margin: 0 0 0 3.2rem; 
+
+    list-style-type: none;
+
+    color: #2c3e50;
+}
+.checkbox li:hover input[type='checkbox'] + label::before
+{
+    color: #2c3e50;
+}
+.checkbox li:hover input[type='checkbox'] + label::after
+{
+    border-right: .2rem solid #fff;
+    border-bottom: .2rem solid #fff;
+}
+.checkbox li input[type='checkbox']
+{
+    display: none;
+}
+.checkbox li input[type='checkbox']:disabled + label
+{
+    color: #d7dcde;
+}
+.checkbox li input[type='checkbox']:disabled + label::after
+{
+    display: none;
+}
+.checkbox li input[type='checkbox']:checked + label
+{
+    color: #1abc9c;
+}
+.checkbox li input[type='checkbox']:checked + label::before
+{
+    background-color: #1abc9c;
+}
+.checkbox li input[type='checkbox']:checked + label::after
+{
+    border-right: .2rem solid #fff;
+    border-bottom: .2rem solid #fff;
+}
+.checkbox li input[type='checkbox'] + label::before
+{
+    position: absolute;
+    left: -3.2rem;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 2rem;
+    height: 2rem;
+
+    content: '';
+
+    border-radius: .5rem;
+    background-color: #d7dcde;
+}
+.checkbox li input[type='checkbox'] + label::after
+{
+    position: absolute;
+    left: -2.6rem;
+
+    display: inline-block;
+
+    width: .5rem;
+    height: .8rem;
+    margin-top: .3rem; 
+
+    content: '';
+    transform: rotate(45deg);
+}
+
+input.toggle
+{
+    position: absolute;
+
+    visibility: hidden; 
+
+    margin-left: -9999px;
+}
+input.toggle + label
+{
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+    user-select: none; 
+
+    outline: none;
+}
+input.toggle-round + label
+{
+    width: 80px;
+    height: 29px;
+
+    transition: .4s; 
+
+    border-radius: 29px;
+    background-color: #bdc3c7;
+}
+input.toggle-round + label::after
+{
+    position: absolute;
+    top: 3px;
+    bottom: 1px;
+    left: 3px;
+
+    display: block;
+
+    width: 23px;
+    height: 23px;
+
+    content: '';
+    transition: .4s; 
+
+    border-radius: 100%;
+    background-color: #7f8c8d;
+}
+input.toggle-round + label::before
+{
+    font-family: 'Ubuntu regular';
+    font-size: 18px;
+    line-height: 29px;
+
+    position: absolute;
+
+    display: block;
+
+    margin-left: 30px;
+
+    content: 'OFF';
+    transition: .4s; 
+
+    color: #fff;
+}
+input.toggle-round:checked + label
+{
+    background-color: #2c3e50;
+}
+input.toggle-round:checked + label:after
+{
+    margin-left: 51px;
+
+    background-color: #1abc9c;
+}
+input.toggle-round:checked + label::before
+{
+    font-family: 'Ubuntu regular';
+    font-size: 18px;
+    line-height: 29px; 
+
+    position: absolute;
+
+    display: block;
+
+    margin-left: 17px;
+
+    content: 'ON';
+
+    color: #1abc9c;
+}
+input.toggle-square + label
+{
+    overflow: hidden; 
+
+    width: 80px;
+    height: 29px;
+
+    transition: .4s;
+
+    border-radius: 5px;
+    background-color: #bdc3c7;
+}
+input.toggle-square + label::after
+{
+    position: absolute;
+
+    display: block;
+
+    width: 29px;
+    height: 29px;
+
+    content: '';
+    transition: .4s; 
+
+    background-color: #7f8c8d;
+}
+input.toggle-square + label::before
+{
+    font-family: 'Ubuntu regular';
+    font-size: 28px;
+    line-height: 29px; 
+
+    position: absolute;
+
+    display: block;
+
+    margin-top: -2px;
+    margin-left: 45px;
+
+    content: '×';
+
+    color: #fff;
+}
+input.toggle-square:checked + label
+{
+    background-color: #2c3e50;
+}
+input.toggle-square:checked + label:after
+{
+    margin-left: 51px;
+
+    background-color: #1abc9c;
+}
+input.toggle-square:checked + label::before
+{
+    font-family: 'Ubuntu regular';
+
+    position: absolute;
+
+    display: block;
+
+    width: 5px;
+    height: 10px;
+    margin-top: 6px;
+    margin-left: 20px; 
+
+    content: '';
+    transform: rotate(45deg);
+
+    color: #1abc9c;
+    border-right: 3px solid #1abc9c;
+    border-bottom: 3px solid #1abc9c;
+}
+
+/* Inputs styles import END*/
+/* Pagination styles import */
+.paginate ul
+{
+    line-height: 3.9rem;
+
+    display: inline-block;
+    overflow: hidden;
+
+    height: 3.9rem;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+    vertical-align: middle; 
+
+    border-radius: .5rem;
+    background-color: #d7dcde;
+}
+
+.paginate li
+{
+    display: inline-block;
+    overflow: hidden;
+
+    margin: 0;
+    margin: 0 1.3rem 0 0; 
+    padding: 0;
+
+    vertical-align: middle;
+
+    border-radius: 100%;
+    background-color: #fff;
+}
+.paginate li.number
+{
+    width: 2rem;
+    height: 2rem;
+}
+.paginate li.number a
+{
+    line-height: 2rem;
+
+    width: 2rem;
+    height: 2rem;
+
+    color: #c2c8ce;
+}
+.paginate li.active
+{
+    border-radius: 2.6rem; 
+    background-color: #2c3e50;
+}
+.paginate li.active a
+{
+    line-height: 2.6rem; 
+
+    width: 3.5rem;
+    height: 2.6rem;
+
+    color: #fff;
+}
+.paginate li.more
+{
+    border-radius: 2rem;
+}
+.paginate li.more a
+{
+    width: 2.4rem;
+    height: 1.6rem;
+}
+.paginate li:nth-child(2)
+{
+    margin: 0 1.3rem 0 1.3rem;
+}
+.paginate li:first-child,
+.paginate li.first
+{
+    position: relative;
+
+    width: 4.9rem;
+    height: 100%;
+    margin: 0; 
+
+    color: #d7dcde;
+    border-right: 2px solid #fff;
+    border-radius: 0;
+    background-color: #d7dcde;
+}
+.paginate li:first-child a,
+.paginate li.first a
+{
+    width: 100%;
+    height: 100%;
+}
+.paginate li:first-child:before,
+.paginate li.first:before
+{
+    position: absolute;
+    top: 1.43rem;
+    left: 2rem;
+
+    width: .8rem;
+    height: .8rem;
+
+    content: '';
+    transform: rotate(45deg); 
+
+    border: 2px solid #fff;
+    border-width: 0 0 .3rem .3rem;
+}
+.paginate li:last-child,
+.paginate li.last
+{
+    position: relative;
+
+    width: 4.9rem;
+    height: 100%;
+    margin: 0; 
+
+    color: #d7dcde;
+    border-left: 2px solid #fff;
+    border-radius: 0;
+    background-color: #d7dcde;
+}
+.paginate li:last-child a,
+.paginate li.last a
+{
+    width: 100%;
+    height: 100%;
+}
+.paginate li:last-child:before,
+.paginate li.last:before
+{
+    position: absolute;
+    top: 1.43rem;
+    right: 2rem;
+
+    width: .8rem;
+    height: .8rem;
+
+    content: '';
+    transform: rotate(225deg); 
+
+    border: 2px solid #fff;
+    border-width: 0 0 .3rem .3rem;
+}
+
+.paginate a
+{
+    line-height: 1.6rem; 
+
+    display: block;
+
+    width: 1.6rem;
+    height: 1.6rem;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+.paginate a:hover,
+.paginate a:focus
+{
+    color: #1abc9c; 
+    background-color: #1abc9c;
+}
+
+/* Pagination styles import END*/
+/* Page styles import */
+html
+{
+    font-size: 10px; 
+
+    background-color: #fff;
+}
+
+body
+{
+    font-family: 'Ubuntu regular';
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper
+{
+    position: relative;
+
+    width: 100%;
+    height: 100%; 
+    padding: 0 0 0 200px;
+}
+.wrapper #header
+{
+    width: 100%;
+    height: 63px;
+
+    border-bottom: 1px solid #dfdfdf; 
+    background-color: #fff;
+}
+.wrapper .aside
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 200px;
+    height: 100%;
+
+    background-color: #232932;
+}
+.wrapper ul.categories
+{
+    width: 200px;
+    height: 100vh;
+
+    background-color: #232932;
+}
+.wrapper ul.categories li
+{
+    position: relative; 
+
+    height: 63px;
+
+    list-style: none;
+
+    vertical-align: middle;
+
+    color: #fff;
+    border-bottom: 1px solid #3a414d;
+    background-color: #232932;
+}
+.wrapper .icon
+{
+    position: absolute;
+    top: 50%;
+    left: 25%; 
+
+    display: inline-block;
+}
+.wrapper .category
+{
+    display: inline-block;
+    float: right; 
+
+    vertical-align: middle;
+}
+.wrapper .category .first-line
+{
+    display: block;
+}
+
+.sprite
+{
+    background-image: url('../img/sprite.png');
+    background-repeat: no-repeat;
+}
+
+.washer-dryers
+{
+    width: 23px;
+    height: 31px; 
+
+    background-position: -30px 0;
+}
+
+.search
+{
+    width: 27px;
+    height: 27px;
+
+    background-position: 0 0;
+}
+
+.fridges-freezers
+{
+    width: 47px;
+    height: 34px;
+
+    background-position: -60px 0;
+}
+
+.cooking
+{
+    width: 53px;
+    height: 34px;
+
+    background-position: -110px 0;
+}
+
+.dishwashers-sinks
+{
+    width: 58px;
+    height: 31px;
+
+    background-position: -165px 0;
+}
+
+.tv-audio
+{
+    width: 48px;
+    height: 34px;
+
+    background-position: -225px 0;
+}
+
+.heating-cooling
+{
+    width: 51px;
+    height: 36px;
+
+    background-position: -110px -36px;
+}
+
+.small-appliances
+{
+    width: 49px;
+    height: 31px;
+
+    background-position: -645px -36px;
+}
+
+.bbq
+{
+    width: 32px;
+    height: 35px;
+
+    background-position: -60px -36px;
+}
+
+.brands
+{
+    width: 28px;
+    height: 26px;
+
+    background-position: -30px -36px;
+}
+
+.sale
+{
+    width: 30px;
+    height: 29px;
+
+    background-position: -165px -36px;
+}
+
+/* Page styles import END*/

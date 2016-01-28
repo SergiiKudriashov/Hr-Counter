@@ -1,0 +1,41 @@
+table {
+	line-height: 2.1rem;
+	padding: 0;
+	margin: 0;
+	border-radius: $table-border-radius;
+	border: 1.4px solid $table-border-color;
+	border-spacing: 0;
+}
+td,
+th {
+	padding: 0 $table-lf-rt-padding 0 $table-lf-rt-padding;
+	border: 0.1rem solid $table-border-color;
+	font-size: $table-font-size;
+	height: $table-cell-height;
+	text-align: center;
+}
+th{
+	background-color: $th-bg-color;
+	font-family: 'Ubuntu bold';
+	color: $th-color;
+}
+td {
+	background-color: $tr-bg-color-even;
+	font-family: 'Ubuntu regular';
+	color: $td-color;
+}
+tr:nth-child(2n+1) td{
+	background-color: $tr-bg-color-odd;
+}
+tr:first-child th:first-child{
+	border-radius: $table-border-radius 0 0 0;
+}
+tr:last-child td:first-child{
+	border-radius:  0 0 0 $table-border-radius;
+}
+tr:first-child th:last-child{
+	border-radius: 0 $table-border-radius 0 0;
+}
+tr:last-child td:last-child{
+	border-radius: 0 0 $table-border-radius 0;
+}
