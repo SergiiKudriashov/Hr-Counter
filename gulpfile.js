@@ -5,6 +5,8 @@ var gulp = require('gulp'),
 		clean = require('gulp-clean'),
 		connect = require('gulp-connect'),
 		excel2json = require('gulp-excel2json'),
+		rename = require("gulp-rename"),
+		concat = require('gulp-concat'),
 		sequence = require('run-sequence');
 
 var bases = {
@@ -19,7 +21,7 @@ var path = {
 					fonts: 'build/css/fonts',
 					img: 'build/img',
 					js: 'build/js',
-					xls: 'build/xls'
+					json: 'build/json'
 			},
 			src:  {
 				html: 'src/index.html',
@@ -36,17 +38,44 @@ var path = {
 }
 
 gulp.task('xls', function() {
-    gulp.src([ path.src.xls])
+    gulp.src([path.src.xls])
         .pipe(excel2json({
             headRow: 1,
-            valueRowStart: 3,
+            valueRowStart: 2,
             trace: true
         }))
-        .pipe(gulp.dest(path.build.xls))
+        .pipe(gulp.dest(path.build.json))
 });
+
+gulp.task('xls-rename', function() {
+	gulp.src([path.build.json +'/*'])
+	  .pipe(rename(function (path) {
+	    // path.dirname += "/ciao";
+	    // path.basename += "-goodbye";
+	    path.extname = ".js"
+	  }))
+	  .pipe(gulp.dest(path.build.json));
+});
+
+gulp.task('concat-json', function() {
+  return gulp.src([path.build.js + '/var-pumps.js', path.build.json+ '/pumps.js', path.build.js+ '/last-pumps.js'])
+    .pipe(concat('pumps.js'))
+    .pipe(gulp.dest(path.build.js));
+});
+
+gulp.task('clean-xls', function () {
+  return gulp.src([path.build.json + '/*.xls'], {read: false})
+    .pipe(clean());
+});
+
 
 gulp.task('clean', function() {
 	return gulp.src(bases.dist)
+		.pipe(clean())
+});
+
+gulp.task('clean-json', function() {
+	return gulp.src([path.build.json])
 		.pipe(clean())
 });
 
@@ -171,12 +200,24 @@ gulp.task('watch-scss-components', function () {
  gulp.watch([ path.src.scsscomponents], ['reload-scss'] )
 });
 
+gulp.task('xls-json', function() {
+	sequence(
+		['clean-json'],
+		'xls',
+		['xls-rename']
+	);
+});
 
 gulp.task('default', function() {
 	sequence(
-		'clean',
+		['clean'],
+		['xls'],
 		['copy-html','copy-js','scss','copy-img','connect','copy-fonts'],
 		'styles',
+		'xls-rename',
+		['concat-json'],
+		'clean-xls',
+		'concat-json',
 		['watch', 'watch-scss-components']
 	);
 });
